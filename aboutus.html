@@ -68,13 +68,17 @@
             text-shadow: 1px 1px 2px white; /* Added text shadow */
         }
         .team-container {
-            background-color: white;
-            padding: 20px; /* Adjusted padding for better spacing */
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center items horizontally */
-        }
+    background-color: white;
+    padding: 20px; /* Adjusted padding for better spacing */
+    margin-top: 0; /* Set margin-top to 0 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+
+
+        
         .team-members {
             display: flex;
             justify-content: center; /* Center the items horizontally */
@@ -112,12 +116,11 @@
         }
 
         h1 {
-            margin-top: 20px; /* Add margin below the h1 heading */
-            font-size: 20px;
+            margin-top: 20px;
+            font-size: 24px; /* Adjusted font size for mobile */
             color: black;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 3px;
             text-align: center;
             font-family: 'Roboto', sans-serif;
         }
@@ -128,6 +131,7 @@
         p {
             font-size: 12px; /* Set font size for bio text */
             text-align: left;
+            line-height: 1.6;
         
         }
     </style>
@@ -159,28 +163,29 @@
     <script>
         // JavaScript to populate team members dynamically and add dropdown functionality   
         document.addEventListener("DOMContentLoaded", () => {
-    const teamMembers = [
-        {
-            name: "Stephanie Laird",
-            photo: "./steph.png",
-            bio: "Stephanie Laird is an accomplished, dedicated, and compassionate individual. She has been caring for others since she was just 10 years old when she took on the responsibility of looking after her special needs sister. This formative experience instilled in Stephanie a deep sense of empathy and responsibility, which would shape her future endeavors. Stephanie grew up in Billings, Montana, and experienced the joys and challenges of family life from a young age. As the eldest sibling in a household that included a special needs sister, Stephanie quickly assumed a caregiving role, demonstrating maturity and kindness beyond her years. This experience instilled in her a profound understanding of the challenges faced by individuals with special needs and ignited a passion for advocating on their behalf. Later on, Stephanie became a foster parent, opening up her heart and home to children in need. She provided them with love, stability, and guidance, becoming a source of strength and support for every child entrusted to her care. In her professional life, Stephanie excelled as a realtor, leveraging her expertise and dedication to serve clients with integrity and diligence. Her commitment to excellence led to accolades such as 'Realtor of the Year' and elevated Stephanie to the presidency of the local real estate board. In these leadership roles, Stephanie advocated for ethical standards, giving back to the community, and championed initiatives to enhance the community's access to housing. Stephanie remains deeply engaged in volunteer work, particularly within her church community. She has led several youth programs and offered assistance to young children by teaching them how to sing. Her unwavering dedication to making a positive difference in the lives of others serves as an inspiration to all who know her. In every aspect of her life, Stephanie exemplifies the transformative power of empathy, resilience, and service. Her story is an inspiring testament to the impact one individual can make."
-        },
-        {
-            name: "Ryan Laird",
-            photo: "./ryan.png",
-            bio: "Ryan Laird is the chief operating officer, currently managing a company with approximately eight hundred employees. His main role is ensuring the intellectually disabled community both adults and children are advocated for and their needs are met to the best of his ability. Ryan is an individual that is compassionate and always advocates for those who need extra help, a dedicated community leader, and a champion for education through his involvement in the school board and other various community programs. Ryan was raised in the small town of Monteview, Idaho where he learned hard work, and a sense of empathy and compassion from an early age. Growing up in such an environment, he developed a deep-seated desire to make a positive difference in the lives of others. It was during these formative years Ryan discovered his passion for fostering children and supporting them in their journeys towards brighter futures. Driven by his desire for change Ryan embarked on a journey of fostering children, providing them with a safe and loving home environment where they could thrive and flourish. Another great impact Ryan has made in the community is that he currently serves and has served for two years on the Bonneville County, Idaho board of guardians, where he assists in helping intellectually disabled adults make important life decisions. Recognizing the importance of community support Ryan served as a trustee on the Madison District #321 school board for eight years. Ryan actively engaged with local organizations and initiatives aimed at improving the welfare of vulnerable individuals. Whether through advocating for policy changes, overseeing large budgets, or working to ensure school safety, Ryan has worked tirelessly to foster a sense of belonging, empowerment, and safety within the community. Believing that education is a cornerstone of empowerment and opportunity, Ryan holds a Bachelor of Science in Health Care Management, as well as a Master of Business in Health Care Management from Western Governors University. This has allowed Ryan to leverage his skills and expertise to enforce positive change both within his profession and the broader community. Through his leadership roles and collaborative efforts, he has demonstrated a steadfast commitment to making a meaningful difference in the lives of others, embodying the values of compassion, integrity, and social responsibility. Reflecting on Ryan and his journey of service and advocacy, he is humbled by the impact he has rendered in the lives of foster children, his community, and the field of education. His unwavering dedication to nurturing hope and fostering positive change serves as an inspiration to all who aspire to make a difference in the world. In a world where kindness and compassion are often the most valuable currencies, Ryan’s biography stands as a testament to the transformative power of empathy, advocacy, and community engagement."
-        },
-        {
-            name: "Dan C. Dümmar",
-            photo: "./Dan Dummar.jpg",
-            bio: "Dan C. Dümmar is an attorney at Beard St. Clair Gaffney. Dan’s practice includes both transactional and litigation work. He is also a Supreme Court approved mediator for civil, family law, and criminal cases. Dan also serves as a Parenting Coordinator for the State of Idaho, assisting young children and adolescents to adulthood in navigating the challenges posed by highly contentious parental situations. His role involves guiding them toward a path that genuinely serves the child's best interests amid circumstances often marked by physical and sexual abuse, domestic violence, and substance abuse. Dan has undergone extensive training in these areas and others to effectively fulfill this challenging responsibility. Dan received a Juris Doctorate degree from the University of Idaho and his Master’s Degree from Ohio University. Dan is licensed in Idaho, Utah, Wyoming, and with the Federal Ninth Circuit Court of Appeals. In addition to practicing law full-time, Dan teaches law part-time as an adjunct faculty member at Brigham Young University-Idaho. In his personal life, Dan has been married for over 20 years. He has worked as a college soccer coach for Brigham Young University – Hawaii (NCAA). He enjoys a variety of sports and recreational activities."
-        },
-        {
-            name: "Beth Dümmar",
-            photo: "./beth.jpeg",
-            bio: "Beth's extensive career in mental health care began at the Behavioral Health Center (BHC), a crisis mental health institute in Idaho Falls connected with Eastern Idaho Medical Center Hospital. There, she played a crucial role in running group sessions, working closely with families, and providing one-on-one care to children in crisis, many of whom had attempted suicide. Recognizing the unsafe environments these children faced, Beth helped facilitate their healing and advocated for them to get the necessary care and support. Her passion for helping children and families led her to the Madison School District's mental health unit, where she worked aiding youngsters facing mental health challenges. Through skills training, family coordination, and personalized care, she made a significant impact on their well-being. Beth's experience extends to counseling work at Tueller Counseling, where she provided therapy to children and families in various settings. Additionally, her leadership role in as a licensed administrator for an assisted living centers. Today, Beth serves as a valued member of Family Services and Ostermiller Counseling, specializing in trauma and abuse therapy for children and youth. Her expertise in play therapy and Cognitive Behavioral Therapy (CBT) ensures comprehensive care for her clients, fostering healing and growth. She also facilitates a group called “Healing from Sexual Trauma.” With a deep-seated passion for helping others, Beth continues to make a positive difference in the lives of those she serves. Beth holds a Master's degree from Walla Walla University and a Bachelor's degree from the University of Idaho in Moscow, Idaho. As a licensed Clinical Social Worker (LCSW), she is dedicated to guiding others on their mental health journeys and is certified as an approved supervisor for LMSWs seeking accreditation under her expert mentorship. Outside of her professional commitments, Beth is a devoted mother of six children and one grandson. She shares her passion for cheerleading as the varsity cheer coach at Rigby High School and enjoys staying active through running and playing tennis."
-        },
-    ];
+            const teamMembers = [
+    {
+        name: "Stephanie Laird",
+        photo: "./steph.png",
+        bio: "Stephanie Laird is an accomplished, dedicated, and compassionate individual. She has been caring for others since she was just 10 years old when she took on the responsibility of looking after her special needs sister.\n\nThis formative experience instilled in Stephanie a deep sense of empathy and responsibility, which would shape her future endeavors. Stephanie grew up in Billings, Montana, and experienced the joys and challenges of family life from a young age. As the eldest sibling in a household that included a special needs sister, Stephanie quickly assumed a caregiving role, demonstrating maturity and kindness beyond her years.\n\nThis experience instilled in her a profound understanding of the challenges faced by individuals with special needs and ignited a passion for advocating on their behalf. Later on, Stephanie became a foster parent, opening up her heart and home to children in need. She provided them with love, stability, and guidance, becoming a source of strength and support for every child entrusted to her care.\n\nIn her professional life, Stephanie excelled as a realtor, leveraging her expertise and dedication to serve clients with integrity and diligence. Her commitment to excellence led to accolades such as 'Realtor of the Year' and elevated Stephanie to the presidency of the local real estate board. In these leadership roles, Stephanie advocated for ethical standards, giving back to the community, and championed initiatives to enhance the community's access to housing.\n\nStephanie remains deeply engaged in volunteer work, particularly within her church community. She has led several youth programs and offered assistance to young children by teaching them how to sing. Her unwavering dedication to making a positive difference in the lives of others serves as an inspiration to all who know her.\n\nIn every aspect of her life, Stephanie exemplifies the transformative power of empathy, resilience, and service. Her story is an inspiring testament to the impact one individual can make."
+    },
+    {
+        name: "Ryan Laird",
+        photo: "./ryan.png",
+        bio: "Ryan Laird is the chief operating officer, currently managing a company with approximately eight hundred employees. His main role is ensuring the intellectually disabled community both adults and children are advocated for and their needs are met to the best of his ability.\n\nRyan is an individual that is compassionate and always advocates for those who need extra help, a dedicated community leader, and a champion for education through his involvement in the school board and other various community programs. Ryan was raised in the small town of Monteview, Idaho where he learned hard work, and a sense of empathy and compassion from an early age.\n\nGrowing up in such an environment, he developed a deep-seated desire to make a positive difference in the lives of others. It was during these formative years Ryan discovered his passion for fostering children and supporting them in their journeys towards brighter futures. Driven by his desire for change Ryan embarked on a journey of fostering children, providing them with a safe and loving home environment where they could thrive and flourish.\n\nAnother great impact Ryan has made in the community is that he currently serves and has served for two years on the Bonneville County, Idaho board of guardians, where he assists in helping intellectually disabled adults make important life decisions. Recognizing the importance of community support Ryan served as a trustee on the Madison District #321 school board for eight years.\n\nRyan actively engaged with local organizations and initiatives aimed at improving the welfare of vulnerable individuals. Whether through advocating for policy changes, overseeing large budgets, or working to ensure school safety, Ryan has worked tirelessly to foster a sense of belonging, empowerment, and safety within the community. Believing that education is a cornerstone of empowerment and opportunity, Ryan holds a Bachelor of Science in Health Care Management, as well as a Master of Business in Health Care Management from Western Governors University.\n\nThis has allowed Ryan to leverage his skills and expertise to enforce positive change both within his profession and the broader community. Through his leadership roles and collaborative efforts, he has demonstrated a steadfast commitment to making a meaningful difference in the lives of others, embodying the values of compassion, integrity, and social responsibility.\n\nReflecting on Ryan and his journey of service and advocacy, he is humbled by the impact he has rendered in the lives of foster children, his community, and the field of education. His unwavering dedication to nurturing hope and fostering positive change serves as an inspiration to all who aspire to make a difference in the world. In a world where kindness and compassion are often the most valuable currencies, Ryan’s biography stands as a testament to the transformative power of empathy, advocacy, and community engagement."
+    },
+    {
+        name: "Dan C. Dümmar",
+        photo: "./Dan Dummar.jpg",
+        bio: "Dan C. Dümmar is an attorney at Beard St. Clair Gaffney. Dan’s practice includes both transactional and litigation work. He is also a Supreme Court approved mediator for civil, family law, and criminal cases. Dan also serves as a Parenting Coordinator for the State of Idaho, assisting young children and adolescents to adulthood in navigating the challenges posed by highly contentious parental situations.\n\nHis role involves guiding them toward a path that genuinely serves the child's best interests amid circumstances often marked by physical and sexual abuse, domestic violence, and substance abuse. Dan has undergone extensive training in these areas and others to effectively fulfill this challenging responsibility. Dan received a Juris Doctorate degree from the University of Idaho and his Master’s Degree from Ohio University.\n\nDan is licensed in Idaho, Utah, Wyoming, and with the Federal Ninth Circuit Court of Appeals. In addition to practicing law full-time, Dan teaches law part-time as an adjunct faculty member at Brigham Young University-Idaho.\n\nIn his personal life, Dan has been married for over 20 years. He has worked as a college soccer coach for Brigham Young University – Hawaii (NCAA). He enjoys a variety of sports and recreational activities."
+    },
+    {
+        name: "Beth Dümmar",
+        photo: "./beth.jpeg",
+        bio: "Beth's extensive career in mental health care began at the Behavioral Health Center (BHC), a crisis mental health institute in Idaho Falls connected with Eastern Idaho Medical Center Hospital. There, she played a crucial role in running group sessions, working closely with families, and providing one-on-one care to children in crisis, many of whom had attempted suicide.\n\nRecognizing the unsafe environments these children faced, Beth helped facilitate their healing and advocated for them to get the necessary care and support. Her passion for helping children and families led her to the Madison School District's mental health unit, where she worked aiding youngsters facing mental health challenges.\n\nThrough skills training, family coordination, and personalized care, she made a significant impact on their well-being. Beth's experience extends to counseling work at Tueller Counseling, where she provided therapy to children and families in various settings. Additionally, her leadership role in as a licensed administrator for an assisted living centers.\n\nToday, Beth serves as a valued member of Family Services and Ostermiller Counseling, specializing in trauma and abuse therapy for children and youth. Her expertise in play therapy and Cognitive Behavioral Therapy (CBT) ensures comprehensive care for her clients, fostering healing and growth.\n\nShe also facilitates a group called “Healing from Sexual Trauma.” With a deep-seated passion for helping others, Beth continues to make a positive difference in the lives of those she serves. Beth holds a Master's degree from Walla Walla University and a Bachelor's degree from the University of Idaho in Moscow, Idaho.\n\nAs a licensed Clinical Social Worker (LCSW), she is dedicated to guiding others on their mental health journeys and is certified as an approved supervisor for LMSWs seeking accreditation under her expert mentorship.\n\nOutside of her professional commitments, Beth is a devoted mother of six children and one grandson. She shares her passion for cheerleading as the varsity cheer coach at Rigby High School and enjoys staying active through running and playing tennis."
+    }
+];
+
 
     const teamContainer = document.getElementById("team-members");
 
