@@ -8,7 +8,7 @@
     <style>
         /* Global styles */
         body {
-            font-family: robotto;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -26,9 +26,8 @@
         }
         .logo {
             max-width: 100px;
-            margin-right: 1500px;
-            padding: 10px;
-            
+            /* Removed excessive margin-right and padding */
+            margin: 0 auto; /* Center logo horizontally */
         }
         nav ul {
             list-style-type: none;
@@ -44,7 +43,7 @@
         nav ul li a {
             text-decoration: none;
             color: black; /* Changed nav link color */
-            font-size: 20px; /* Increased font size */
+            font-size: 16px; /* Adjusted font size for mobile */
             font-weight: bold; /* Added bold font weight */
             text-transform: uppercase; /* Uppercase text */
             letter-spacing: 1px; /* Added letter spacing */
@@ -57,22 +56,25 @@
         section {
             padding: 20px;
             margin: 0 auto;
-            max-width: 800px; /* Adjusted max-width for content */
+            max-width: 100%; /* Adjusted max-width for responsiveness */
         }
 
         h1 {
             margin-top: 20px;
-    font-size: 20px;
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-align: center;
-    font-family: 'CustomFont', sans-serif;
+            font-size: 24px; /* Adjusted font size for mobile */
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            border-bottom: 2px solid #333; /* Added border bottom */
+            padding-bottom: 10px; /* Added padding bottom */
         }
 
         p {
             line-height: 1.6;
             margin-bottom: 15px;
+            font-size: 16px; /* Adjusted font size for mobile */
         }
 
         /* Footer styles */
